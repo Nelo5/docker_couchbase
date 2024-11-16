@@ -1,6 +1,10 @@
-FROM couchbase
+FROM couchbase/server:community
 
-ENV COUCHBASE_ADMINISTRATOR_USERNAME=admin
-ENV COUCHBASE_ADMINISTRATOR_PASSWORD=password
+LABEL maintainer="furmit@mail.ru"
 
-EXPOSE 8091 8092 8093 8094 11210
+ENV CB_USERNAME=admin
+ENV CB_PASSWORD=adminpassword
+ENV CB_BUCKET=default
+ENV CB_BUCKET_PASSWORD=bucketpassword
+
+EXPOSE 8101 8102 8103

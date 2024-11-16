@@ -1,0 +1,5 @@
+services:
+  couchbase:
+    build: .
+    ports:
+      - 8091-8094:8091-8094
